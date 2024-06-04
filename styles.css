@@ -1,0 +1,9 @@
+body {
+  height: 80vh;
+}
+
+div {
+  border: 2px solid black;
+  padding: 1rem;
+  color: blueviolet;
+}
