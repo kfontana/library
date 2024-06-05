@@ -5,39 +5,39 @@ function Book(title, author, pages, read) {
   this.author = author;
   this.pages = pages;
   this.read = read;
-  this.info = function () {
+  /*this.info = function () {
     return (
       this.title + " by " + this.author + ", " + this.pages + ", " + this.read
-    );
+    );*/
   };
 }
 
 function addBookToLibrary() {
-  const title = "The Hobbit"; // prompt("Title");
-  const author = "J.R.R Tolkien";
-  const pages = "295 pages";
-  const read = "not read yet";
+  const title = [The Hobbit];
+  const author = prompt("Author");
+  const pages = prompt("Pages");
+  const read = prompt("Read");
   myLibrary.push(new Book(title, author, pages, read));
 }
 
 function showBooks() {
   const bookshelf = document.getElementById("bookshelf");
-  myLibrary.forEach((book) => {
+  myLibrary.forEach((object) => {
     const div = document.createElement("div");
-    for (let key in book) {
-      div.textContent = book[key];
+    for (let key in object) {
+      const para = document.createElement("p");
+      para.textContent = object[key];
+      bookshelf.appendChild(para);
       bookshelf.appendChild(div);
     }
   });
 }
 
 addBookToLibrary();
-addBookToLibrary();
-addBookToLibrary();
-addBookToLibrary();
 
 showBooks();
 
+/*
 for (let object in myLibrary) {
   for (let key in myLibrary[object]) {
     const div = document.createElement("div");
@@ -45,6 +45,7 @@ for (let object in myLibrary) {
     bookshelf.appendChild(div);
   }
 }
+*/
 
 /*const theHobbit = new Book(
   "The Hobbit",
