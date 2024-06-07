@@ -8,6 +8,22 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+    <dialog id="bookDialog">
+      <button id="closeBtn">X</button>
+      <form>
+        <p>Add your book data</p>
+        <input id="title" type="text" autofocus placeholder="Title"></input>
+        <input id="author" type="text" placeholder="Author"></input>
+        <input id="pages" type="number" placeholder="Pages"></input>
+        <input id="read" value="read" type="checkbox"></input>
+        <label for="read">Read</label>       
+    <div>
+      <button id="confirmBtn" type="submit">Confirm</button>
+      
+    </div>
+    </form>
+    </dialog>
+    <button id="btnBook">Add NEW BOOK</button>
     <div id="bookshelf"></div>
   </body>
 </html>
